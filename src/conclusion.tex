@@ -1,0 +1,22 @@
+\section{TODO}
+
+\begin{frame}[fragile]
+  \frametitle{TODO}
+  \begin{itemize}
+  \item Try to reduce the influence of noise in the original data and compression/decompression artifacts in the lossy data
+    on FTK distance by using something like Gaussian filtering
+  \item If the above helps, speed up FTK
+    \begin{itemize}
+    \item Use MPI to call FTK in parallel 4 times
+    \item Accelerate FTK on GPU?
+    \item Use MPI version of FTK once Hanqi releases it
+    \end{itemize}
+  \item Try newer accelerated version of MGARD
+  \item Benchmark Kokkos and original version of Gray-Scott on Theta
+  \item Unify how compression/decompression timing is done for all the compression algorithms
+  \item Visualize $256^3$ with ParaView after all the changes since the previous set of movies was generated
+  \item Resolve LLVM compiling issues on Theta
+  \item Debug OpenMP GPU offloading version of Gray-Scott?
+  \item Put the pipeline into Spack? Singularity container?
+  \end{itemize}
+\end{frame}

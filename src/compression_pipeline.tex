@@ -1,0 +1,80 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{default}
+
+\mode<presentation>
+%{ \usetheme{boxes} }
+
+
+\usetheme{Madrid}
+
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{tabulary}
+\usepackage{listings}
+\usepackage{verbatimbox}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{pgfpages}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\pgfdeclareimage[height=1.0cm]{logo_rcc}{icons/ANL_RGB-01.jpg}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\newcommand{\RCCLogo}{
+\begin{textblock}{14}(1.5,1.5)
+  \pgfuseimage{logo_rcc}
+\end{textblock}
+}
+
+
+\definecolor{mycolorcli}{RGB}{53,154,26}
+\definecolor{mycolorcode}{RGB}{0,0,255}
+\definecolor{mycolordef}{RGB}{255,0,0}
+\definecolor{mycolorlink}{RGB}{184,4,255}
+
+
+\title{\huge{Compression pipeline}}
+\author{Igor Yakushin}
+\date{October 23, 2019}
+
+%\definecolor{ChicagoMaroon}{RGB}{0,49,101}
+\definecolor{ChicagoMaroon}{RGB}{4,78,156}
+
+\setbeamercolor{title}{bg=ChicagoMaroon}
+
+\begin{document}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{fcolor}{fg=white,bg=ChicagoMaroon}
+\setbeamertemplate{footline}{
+\begin{beamercolorbox}[ht=4ex,leftskip=1.4cm,rightskip=.3cm]{fcolor}
+\hrule
+\vspace{0.1cm}
+   \hfill \insertshortdate \hfill \insertframenumber/\inserttotalframenumber
+\end{beamercolorbox}
+}
+
+\setbeamercolor{frametitle}{bg=ChicagoMaroon,fg=white}
+
+\begin{frame}
+\RCCLogo
+\titlepage
+\end{frame}
+
+\input{pipeline.tex}
+\input{ftk.tex}
+\input{timing.tex}
+\input{conclusion.tex}
+%\input{movies.tex}
+%\input{next.tex}
+\input{references.tex}
+\input{gs.tex}
+\end{document}
+
